@@ -9,6 +9,7 @@ import { getAnalytics } from "firebase/analytics";
 import { io } from "socket.io-client";
 import DashboardManager from "../modules/DashboardManager.js"
 import 'animate.css';
+import { useInterp } from "../utils/interpolator.js";
 
 const Dashboard = () => {
   const firebaseConfig = {
@@ -162,6 +163,9 @@ const Dashboard = () => {
       }
     });
   }, []);
+
+  let interpPoints = useInterp(0,userData.points,1);
+
   const people = [
     {
       name: 'Lindsay Walton',
@@ -256,7 +260,7 @@ const Dashboard = () => {
                       className="ml-3 bg-gray-900 border border-gray-700 px-3 font-semibold rounded-full text-blue-500  focus:outline-none "
                     >
                       <span className="sr-only">View notifications</span>
-                      {userData.points} points
+                      {interpPoints} points
                     </button>
                  
 
@@ -353,7 +357,7 @@ const Dashboard = () => {
                       className="ml-3  bg-gray-900 border border-gray-700 px-3 font-semibold rounded-full text-blue-500  focus:outline-none "
                     >
                      
-                      {userData.points} points
+                      {interpPoints} points
                     </button>
                     </div>
 
