@@ -23,10 +23,3 @@ export function useInterp(start, end, rate){
 
     return progress;
 }
-
-export function Interpolated(props){
-    const {start, end} = props;
-    let rate = props.rate || 1;
-    const progress = useInterp(start, end, rate);
-    return <>{progress}</>;
-}
