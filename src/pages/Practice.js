@@ -71,7 +71,7 @@ const Practice = () => {
             name: firebaseUser.displayName,
             email: firebaseUser.email,
             imageUrl:
-              "https://ui-avatars.com/api/?name=laphatize&background=random",
+            `https://ui-avatars.com/api/?name=${firebaseUser.email}&background=random`,
           });
         }
 

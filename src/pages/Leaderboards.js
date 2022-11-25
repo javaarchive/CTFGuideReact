@@ -388,7 +388,7 @@ const Leaderboards = () => {
 
                         {leaderboards.data.map((item) => (
                             <tr className={(item.username == "laphatize" ? 'bg-gradient-to-l from-yellow-500 to-black' : 'bg-black') + "  from-gray-900 to-gray-850   rounded-lg"}>
-                                <td className={"inline-flex"}><img className={"w-6 mr-2"} src={"https://ui-avatars.com/api/?name="+ (item.username) + "&background=random"}/><a href="https://test.com" className={(item.pro ? "rainbow-text" : "") + " font-semibold"} >{item.username}</a></td>
+                                <td className={"inline-flex"}><img className={"w-6 mr-2"} src={"https://ui-avatars.com/api/?name="+ (item.username) + "&background=random"}/><a href="#" className={(item.pro ? "rainbow-text" : "") + " font-semibold"} >{item.username}</a></td>
                                 <td>Gold</td>
                                 <td>{item.points}</td>
                                 <td>{item.country} </td>
